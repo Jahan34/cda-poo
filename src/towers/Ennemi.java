@@ -112,11 +112,11 @@ public class Ennemi {
 
 	public static Ennemi saisirUnEnnemi(){
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Veuillez créer votre Ennemi : ");
+		System.out.println("Veuillez créer votre Ennemi ");
 		Ennemi userEnnemi = new Ennemi();
 		System.out.println("Combien de pv ? : ");
 		int pvuser=sc.nextInt();
-		userEnnemi.pv=pvuser >1000 || pvuser<0 ?300:pvuser;
+		userEnnemi.pv=pvuser;
 		System.out.println("Sa rapidité ? : ");
 		int rapiduser=sc.nextInt();
 		userEnnemi.rapid=rapiduser;
