@@ -116,7 +116,7 @@ public class Ennemi {
 		Ennemi userEnnemi = new Ennemi();
 		System.out.println("Combien de pv ? : ");
 		int pvuser=sc.nextInt();
-		userEnnemi.pv=pvuser;
+		userEnnemi.pv=pvuser >1000 || pvuser<0 ?300:pvuser;
 		System.out.println("Sa rapidité ? : ");
 		int rapiduser=sc.nextInt();
 		userEnnemi.rapid=rapiduser;

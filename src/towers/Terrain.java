@@ -12,14 +12,14 @@ public class Terrain {
 		 
 		 Ennemi unAutremechant= new Ennemi();
 		
-		 lePetitRapide.affiche();
+		/* lePetitRapide.affiche();
 		 lePetitRapide.recevoirDegats(200);
 		 
 		 lePetitRapide.affiche();
 		 lePetitRapide.seDeplace(12,23);
 		 lePetitRapide.affiche();
 		 lePetitRapide.estVivant();
-		 System.out.println(lePetitRapide);
+		 System.out.println(lePetitRapide);*/
 		 System.out.println("Nombre d'ennemi : " + Ennemi.compteur);
 		 Ennemi jpEnnemi= Ennemi.saisirUnEnnemi();
 		 jpEnnemi.affiche();
@@ -31,7 +31,7 @@ public class Terrain {
 		 System.out.println(jpEnnemi.getPv());
 		 
 		 Ennemi monstre = Ennemi.saisirUnEnnemi();
-		 monstre.setPv(900);
+		 monstre.setPv(450);
 		 System.out.println(monstre.getPv());
 }
 
