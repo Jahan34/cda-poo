@@ -1,13 +1,19 @@
 package chat;
 
+
+
 public class Cat {
 	String color;
 	String name;
+	Boolean happy=true;
+	Boolean feed=true;
+	int energy=5;
+	
 	
 	
 	
 	/**
-	 * Constructeur sans paramÃ¨tre
+	 * Constructeur sans paramètre
 	 */
 	public Cat() {
 		System.out.println("Naissance d'un nouveau chat");
@@ -16,7 +22,7 @@ public class Cat {
 	}
 	
 	/**
-	 * Constructeur avec paramÃ¨tre
+	 * Constructeur avec paramètre
 	 * @param pName
 	 * @param pColor
 	 */
@@ -31,35 +37,51 @@ public class Cat {
 	 */
 	public void getDescription() {
 		System.out.println("Le chat " + this.color + " s'appelle " + this.name);
+		if (happy==true) {
+			System.out.println(this.name+"est heureux");
+		
+		}else {
+			System.out.println(this.name+"est triste");
+		}
+		if (energy<2) {
+			System.out.println(this.name+" est fatigué");
+		}else {
+			System.out.println(this.name+" est en forme");
+		}
 	}
 	
+	
 	/**
-	 * mÃ©thode qui permet d'Ã©couter le chat
+	 * méthode qui permet d'écouter le chat
 	 */
 	public void listen() {
 		System.out.println("Miaouuuuuu");
 	}
 	
 	/**
-	 * mÃ©thode qui permet de nourrir le chat
+	 * méthode qui permet de nourrir le chat
 	 * @param food
 	 */
 	public void eat(String food) {
 		System.out.println(this.name + " mange " + food);
+		this.happy=true;
 	}
 	
 	/**
-	 * MÃ©thode qui permet d'envoyer le chat Ã  la chasse
+	 * Méthode qui permet d'envoyer le chat à la chasse
 	 * @return
 	 */
 	public String hunt() {
-		System.out.println(this.name + " part Ã  la chasse ");
+		System.out.println(this.name + " part à la chasse ");
 		String[] chasse = {"souris", "oiseau", "chaussette"};
 		int n = (int)(Math.random() * 3);
+		this.energy--;
 		return chasse[n];
 	} 
 	
 	public void sleep() {
 		System.out.println(this.name + " dort");
+		this.happy=false;
+		this.energy++;
 	}
 }
